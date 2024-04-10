@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    Username: <input id="user">  <br>
+    Password : <input id="pass"> <br>
+
+    <button onclick="handeOnClick()">Submit</button>
+    <script src="./jquery-1.9.1.min.js"></script>
+    
+    <script> 
+        function handeOnClick () {
+           let value = {
+            username : $("#user").val(),
+            password : $("#pass").val(),
+           }
+           $.ajax({
+            url: "/login",
+            type : "POST",
+            data : value,
+            success: function(s_data){
+                    window.location.href = "home"
+            }
+           })
+        }
+    </script>
+</body>
+</html>
