@@ -40,9 +40,9 @@ passport.serializeUser(function(user, cb) {
      return cb(null, user);
  });
 passport.use(new FacebookStrategy({
-  clientID: '2820737694743560',
-  clientSecret: 'f51c6db96116167f8bd5b0ddc5fb46f3',
-  callbackURL: "https://badf-2402-800-6379-693-9c1-f098-5fc5-f4fd.ngrok-free.app/auth/facebook/callback"
+  clientID: 'ss',
+  clientSecret: 'ss',
+  callbackURL: "auth/facebook/callback"
 },
 function(accessToken, refreshToken, profile, cb) {
   // User.findOrCreate({ facebookId: profile.id }, function (err, user) {
