@@ -1,7 +1,7 @@
 const AccountModel = require("../model/UserSchema")
 class Controller {
     index(req,res ){
-        res.render("./index")
+        AccountModel.find( {}).then( data => res.status(200).json(data)).catch(err => res.status(500).json(err))
     }
 }
 module.exports = new Controller

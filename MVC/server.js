@@ -1,10 +1,13 @@
 const express = require("express")
 const path = require("path")
 require('dotenv').config()
+const morgan = require('morgan')
 const app = express()
 app.set('views',path.join(__dirname,"views") ) // specify the views directory
 app.set('view engine', 'ejs') // register the template engine
 app.use(express.static('public'))
+// Morgan
+app.use(morgan('combined'))
 // Routing
 const router = require("./router")
 // Connect

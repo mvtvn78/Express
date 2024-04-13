@@ -7,7 +7,7 @@ const AccountSchema = new Schema({
   password : String
 }, 
 {
-    Collection: "Account"
+    collection: "Account"
 }
 );
 const AccountModel = mongoose.model("account",AccountSchema)
